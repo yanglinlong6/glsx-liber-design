@@ -1,0 +1,4 @@
+create 'wxl_test1',{NAME => 'info',  COMPRESSION => 'ZSTD',METADATA => {'STORAGE_POLICY' => 'DEFAULT', 'DFS_REPLICATION' => '1', 'CHS_PROMOTE_ON_MAJOR' => 'true'}},SPLITS => ['801','802','803','804','805','806','807','808','809','810','811','812','813']
+
+
+create 'wxl_test',{NAME => 'info',  COMPRESSION => 'ZSTD'},SPLITS => ['801','802','803','804','805','806','807','808','809','810','811','812','813']

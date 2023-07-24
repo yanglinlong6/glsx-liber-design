@@ -1,0 +1,12 @@
+步骤3：映射表device_mapping
+根据dj_device_info_gps表生成，大概有93/94万
+1）运行logistmap/ExportMappingMain，writeFile()生成基础数据，大概有93/94万数据放在logistmap/mapping上
+2）注释掉writeFile()，运行，生成按照市匹配的result
+3）运行logistmap/DetaMain统计有多少已经匹配掉了,生成剩余deta_mapping
+4）运行ImportMain插入数据表device_mapping
+5）删掉mapping，更改deta_mapping为mapping，然后运行ExportMappingByProvMain按照省份匹配
+6）运行ImportMain插入数据表device_mapping
+------------------------------------------------------------------------
+步骤4：登陆日志映射关系文件
+1）FakeRealMapping生成映射关系
+2）copy至
